@@ -1,4 +1,4 @@
-const base = "http://server.koneko.link:4005"
+const base = "http://server.koneko.link:4005/api"
 
 async function getList () {
     let token = localStorage.getItem("nekowatchtoken");
