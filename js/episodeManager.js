@@ -27,7 +27,14 @@ var interval = setInterval(async function () {
         div.innerHTML = `<a href="/view?q=${url}">Episode ${i}</a>`;
         document.querySelector(".regular").appendChild(div);
     }
-
+	document.head.innerHtml += `
+			<title>${data.title} | NekoWatch</title>
+		<meta property="og:title" content="${data.title} | NekoWatch" />
+		<meta name="description" content="${data.description}" />
+		<meta property="og:description" content="${data.description}" />
+		<meta property="og:image" content="${image}" />
+		<meta property="twitter:title" content="${data.title}" />
+	`
     async function podarok () {
         if (!localStorage.nekowatchtoken) return
         let item = await itemInfoName(datatitle);
