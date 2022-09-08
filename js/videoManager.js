@@ -7,6 +7,7 @@ var interval = setInterval(async function () {
     if (typeof window.gogo == 'undefined') return;
     if (finished == true) return
     clearInterval(interval)
+    let scraper = window.gogo
     var title, url, videos, data, image, number, episodes, datatitle, max
     let params = new URLSearchParams(window.location.search)
     var q = params.get('q')
