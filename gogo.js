@@ -102,7 +102,7 @@ async function get (link) {
         genres = ["N/A"]
     }
     //get all numbers of videos
-    let num = $(videos[videos.length - 1]).html().replace(/\s+/g, "").split("ep_end")[1].split(">")[0].replace(/"/g, "").replace("=", "")
+    let num = videos[videos.length - 1].replace(/\s+/g, "").split("ep_end")[1].split(">")[0].replace(/"/g, "").replace("=", "")
     //compile all into obj
     let obj = {
         title,
