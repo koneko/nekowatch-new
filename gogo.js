@@ -102,8 +102,10 @@ async function get (link) {
         genres = ["N/A"]
     }
     //get all numbers of videos
+    let num = null
     if(!videos) return alert("error")
-    let num = $(videos[videos.length - 1]).html().replace(/\s+/g, "").split("ep_end")[1].split(">")[0].replace(/"/g, "").replace("=", "")
+    if ( $(videos[videos.length - 1]).html() == null ) num = 0
+    else num = $(videos[videos.length - 1]).html().replace(/\s+/g, "").split("ep_end")[1].split(">")[0].replace(/"/g, "").replace("=", "")
     //compile all into obj
     let obj = {
         title,
