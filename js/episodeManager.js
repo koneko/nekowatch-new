@@ -1,5 +1,6 @@
 var finished = false
 var datatitle
+var globalCurrentEpisode = 0
 function openEpisode (iurl) {
     let url = `/view?q=${iurl}`;
     location = url;
@@ -18,7 +19,6 @@ var interval = setInterval(async function () {
     let genrecombined = data.genres.join(", ")
     console.log(data)
     finished = true
-    let globalCurrentEpisode = 0
     for (let i = 1; i <= episodes; i++) {
         const episode = i;
         let div = document.createElement("div");
