@@ -1,5 +1,5 @@
 import * as cheerio from "https://esm.sh/cheerio@1.0.0-rc.12"
-const base = "https://www1.gogoanime.ee/"
+const base = "https://www2.gogoanime.ee/"
 
 async function search (query) {
     let url = base + "search.html?keyword=" + query
