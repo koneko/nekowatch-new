@@ -60,7 +60,7 @@ var interval = setInterval(function () {
                     `;
             div.setAttribute(
                 "onclick",
-                "window.location.href='/anime/" + title + "'"
+                "window.location.href='/anime?q=" + title + "'"
             );
             output.appendChild(div);
         });
